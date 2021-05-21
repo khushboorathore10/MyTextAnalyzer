@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+</head>
+<body>
+<h1>WELCOME TO TEXT ANALYZER!!ENTER YOUR TEXT BELOW</h1>
+<!--<a href="http://127.0.0.1:8000/removepunc"> removepunc</a><br>-->
+<!--<a href="http://127.0.0.1:8000/captilizefirst"> capitalize first</a><br>-->
+<!--<a href="http://127.0.0.1:8000/newlineremover"> new line remover</a><br>-->
+<!--<a href="http://127.0.0.1:8000/spaceremover"> space remover</a><br>-->
+<!--<a href="http://127.0.0.1:8000/charcount"> character count</a><br>-->
+<!--<a href="http://127.0.0.1:8000/swapcase"> swap case</a>-->
+<form action='/analyze' method="post" >
+    {% csrf_token %}
+    <textarea name='text'  style='margin: 0px 9.6px 0px 0px; width: 1438px; height: 148px;'></textarea><br>
+        <input type="checkbox" name="removepunc"> Remove Punctuations<br>
+        <input type="checkbox" name="captilizefirst"> capitalize first<br>
+        <input type="checkbox" name="newlineremover"> new line remover<br>
+        <input type="checkbox" name="spaceremover"> space remover<br>
+        <input type="checkbox" name="swapcase"> swap case<br>
+        <button type="submit" formaction='/analyze'>Analyze text</button>
+</form>
+
+</body>
+</html>
