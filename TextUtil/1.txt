@@ -1,4 +1,0 @@
-Hello my name is khushboo rathore 
-and i am creating my first web site
- via django 
-today.
